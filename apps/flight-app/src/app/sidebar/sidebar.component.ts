@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import { FlightService } from '@flight-workspace/flight-lib';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -7,4 +9,10 @@ import {Component} from '@angular/core';
 })
 
 export class SidebarComponent {
+
+  flightCount$: Observable<number>;
+
+  constructor(private flightService: FlightService) {
+    this.flightCount$ = flightService.flightCount$;
+  }
 }
