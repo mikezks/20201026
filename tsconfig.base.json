@@ -10,30 +10,20 @@
     "importHelpers": true,
     "target": "es5",
     "module": "esnext",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@flight-workspace/logger-lib": [
-        "libs/logger-lib/src/index.ts"
-      ],
-      "@flight-workspace/flight-lib": [
-        "libs/flight-lib/src/index.ts"
-      ],
-      "@flight-workspace/dashboard-lib": [
-        "libs/dashboard-lib/src/index.ts"
+      "@flight-workspace/logger-lib": ["libs/logger-lib/src/index.ts"],
+      "@flight-workspace/flight-lib": ["libs/flight-lib/src/index.ts"],
+      "@flight-workspace/dashboard-lib": ["libs/dashboard-lib/src/index.ts"],
+      "@flight-workspace/luggage/domain": ["libs/luggage/domain/src/index.ts"],
+      "@flight-workspace/luggage/feature-checkin": [
+        "libs/luggage/feature-checkin/src/index.ts"
       ]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
