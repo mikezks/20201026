@@ -5,11 +5,11 @@ import * as FlightBookingActions from './flight-booking.actions';
 export const flightBookingFeatureKey = 'flightBooking';
 
 export interface State {
-  flights: Flight[]
+  flights: Flight[];
 }
 
 export const initialState: State = {
-  flights: []
+  flights: [],
 };
 
 export interface FlightBookingAppState {
@@ -29,4 +29,3 @@ export const reducer = createReducer(
   }),
 
 );
-
