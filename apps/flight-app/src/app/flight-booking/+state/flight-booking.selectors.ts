@@ -32,8 +32,6 @@ export const selectFlightsByActiveUser = createSelector(
   selectFlights,
   selectPassengerMapping,
   // Projector
-  (user, flights, mapping) => {
-    const bookedFlights = mapping[user.id];
-    return flights.filter(f => bookedFlights.find(id => id === f.id));
-  }
+  (user, flights, mapping) =>
+    flights.filter(f => mapping[user.id][f.id])
 );
