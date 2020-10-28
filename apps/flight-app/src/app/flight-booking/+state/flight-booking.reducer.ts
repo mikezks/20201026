@@ -6,10 +6,19 @@ export const flightBookingFeatureKey = 'flightBooking';
 
 export interface State {
   flights: Flight[];
+  passengerMapping: { [id: number]: number[] };
+  activeUser: { id: number, name: string };
 }
 
 export const initialState: State = {
   flights: [],
+  passengerMapping: {
+    4: [3, 5]
+  },
+  activeUser: {
+    id: 4,
+    name: 'Michael'
+  }
 };
 
 export interface FlightBookingAppState {
